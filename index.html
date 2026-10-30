@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Franck Adrien Mba | Portfolio – Mechatronik & Eingebettete Systeme</title>
+  <title>Franck Adrien Mba | Portfolio – Regelungstechnik & Sensorik</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -28,9 +28,9 @@
               500: '#3b82f6',
               600: '#2563eb',
               700: '#1d4ed8',
-              fau: '#04316A',       /* FAU Universitätsblau */
+              fau: '#04316A',
               fauLight: '#0284c7',
-              accent: '#38bdf8',    /* Cyan Akzent */
+              accent: '#38bdf8',
               emerald: '#10b981'
             },
             darkBg: '#090d16',
@@ -87,17 +87,17 @@
         <a href="#kontakt" class="text-slate-300 hover:text-brand-accent transition-colors">Kontakt</a>
       </nav>
 
-      <!-- Externe Links -->
+      <!-- Externe Links & CV-Download -->
       <div class="hidden sm:flex items-center gap-2.5">
+        <a href="lebenslauf_franck_adrien_mba.pdf" download="Lebenslauf_Franck_Adrien_Mba.pdf" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-semibold shadow-sm transition-all flex items-center gap-1.5" title="Lebenslauf als PDF herunterladen">
+          <i class="fa-solid fa-file-arrow-down text-[11px]"></i>
+          <span>CV (PDF)</span>
+        </a>
         <a href="https://linkedin.com/in/franck-adrien-mba-09559119a" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-darkCard border border-darkBorder hover:border-brand-accent text-slate-400 hover:text-white flex items-center justify-center text-xs transition-all" title="LinkedIn Profil">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
         <a href="https://github.com/franckadrien" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-darkCard border border-darkBorder hover:border-brand-accent text-slate-400 hover:text-white flex items-center justify-center text-xs transition-all" title="GitHub Profil">
           <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="#kontakt" class="ml-1 px-3.5 py-1.5 rounded-lg bg-brand-fauLight hover:bg-brand-500 text-white font-mono text-xs font-semibold shadow-sm transition-all flex items-center gap-1.5">
-          <i class="fa-solid fa-envelope text-[10px]"></i>
-          <span>Kontakt</span>
         </a>
       </div>
 
@@ -115,9 +115,15 @@
       <a href="#firmware" class="text-slate-300 hover:text-brand-accent mobile-link">C++ Firmware</a>
       <a href="#kompetenzen" class="text-slate-300 hover:text-brand-accent mobile-link">Kompetenzen</a>
       <a href="#kontakt" class="text-slate-300 hover:text-brand-accent mobile-link">Kontakt</a>
-      <div class="pt-2 border-t border-darkBorder flex gap-2">
-        <a href="https://linkedin.com/in/franck-adrien-mba-09559119a" target="_blank" class="flex-1 py-2 text-center rounded bg-slate-800 text-white font-mono text-xs">LinkedIn</a>
-        <a href="https://github.com/franckadrien" target="_blank" class="flex-1 py-2 text-center rounded bg-slate-800 text-white font-mono text-xs">GitHub</a>
+      <div class="pt-3 border-t border-darkBorder flex flex-col gap-2">
+        <a href="lebenslauf_franck_adrien_mba.pdf" download="Lebenslauf_Franck_Adrien_Mba.pdf" class="w-full py-2 text-center rounded bg-emerald-600 text-white font-mono text-xs font-semibold flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-file-arrow-down"></i>
+          <span>Lebenslauf herunterladen (PDF)</span>
+        </a>
+        <div class="flex gap-2">
+          <a href="https://linkedin.com/in/franck-adrien-mba-09559119a" target="_blank" class="flex-1 py-2 text-center rounded bg-slate-800 text-white font-mono text-xs">LinkedIn</a>
+          <a href="https://github.com/franckadrien" target="_blank" class="flex-1 py-2 text-center rounded bg-slate-800 text-white font-mono text-xs">GitHub</a>
+        </div>
       </div>
     </div>
   </header>
@@ -138,21 +144,26 @@
           </div>
 
           <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-4">
-            Mechatronik & <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-500">Industrielle Automatisierung</span>
+            Mechatronik & <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-500">Regelungstechnik & Sensorik</span>
           </h1>
 
           <p class="text-sm sm:text-base text-slate-300 max-w-xl mx-auto lg:mx-0 mb-6 leading-relaxed">
-            Ich bin <strong class="text-white font-semibold">Franck Adrien Mba</strong>, Masterstudent der Mechatronik an der Friedrich-Alexander-Universität Erlangen-Nürnberg. Mein Fokus liegt auf hardwarenaher C/C++-Entwicklung, Closed-Loop-Schrittmotorsteuerungen, industrieller Sensorik/Aktorik und zuverlässiger serieller Kommunikation.
+            Ich bin <strong class="text-white font-semibold">Franck Adrien Mba</strong>, Masterstudent der Mechatronik an der FAU Erlangen-Nürnberg mit der Fachrichtung <strong class="text-white font-semibold">Regelungstechnik & Sensorik</strong>. Mein Fokus liegt auf hardwarenaher C/C++-Entwicklung, Closed-Loop-Schrittmotorsteuerungen und industrieller Automatisierung.
           </p>
 
           <!-- Button-Leiste -->
           <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+            <a href="lebenslauf_franck_adrien_mba.pdf" download="Lebenslauf_Franck_Adrien_Mba.pdf" class="px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-semibold shadow-md transition-all flex items-center gap-2">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Lebenslauf (PDF)</span>
+            </a>
+
             <a href="#projekte" class="px-5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-600 text-white font-mono text-xs font-semibold shadow-md transition-all flex items-center gap-2">
               <i class="fa-solid fa-microchip"></i>
-              <span>Projekte ansehen</span>
+              <span>Projekte</span>
             </a>
             
-            <a href="https://linkedin.com/in/franck-adrien-mba-09559119a" target="_blank" rel="noopener" class="px-5 py-2.5 rounded-lg bg-darkCard border border-darkBorder hover:border-brand-accent text-slate-300 hover:text-white font-mono text-xs transition-all flex items-center gap-2">
+            <a href="https://linkedin.com/in/franck-adrien-mba-09559119a" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-lg bg-darkCard border border-darkBorder hover:border-brand-accent text-slate-300 hover:text-white font-mono text-xs transition-all flex items-center gap-2">
               <i class="fa-brands fa-linkedin text-brand-accent"></i>
               <span>LinkedIn</span>
             </a>
@@ -171,7 +182,7 @@
             </div>
             <div>
               <div class="text-xl font-bold font-mono text-white">TestDaF C1</div>
-              <div class="text-xs text-slate-400">4x TDN 4 Zertifiziert</div>
+              <div class="text-xs text-slate-400">Sehr gut (4x TDN 4)</div>
             </div>
             <div>
               <div class="text-xl font-bold font-mono text-emerald-400">§ 16b eAT</div>
@@ -193,23 +204,28 @@
             </div>
 
             <div class="flex flex-col items-center text-center">
-              <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-brand-accent p-0.5 bg-slate-900 shadow-md mb-3">
-                <img src="https://lh3.googleusercontent.com/gg/AJWXcNcJ4a0F9XX4Av5uJre9GwbIAxbnrASqMFBourSMJxgIrsHSM7QFL6WftnEWRjDB3ynSrmqvICKONUpjT5PBIEjmZC3xU8cGiaTh5TJJA2jXnS0LAp9gnnxfjt0-vVCfhme7TuFN1FixBw2vBnvRGsFU3TMfbAR5aBQ8hf4SeFcrz2Xph12Pvzv4O-vSTnwNQTbPXfxzzClivNbuOvKCcTWo2B06hz24Ir5jch7iytv4QIYrVEoN1Y3BjLSDXsDYIHSqkR1TlX7YT1wq0GPnrmHyMd6fidMGl4A=s0" alt="Franck Adrien Mba" class="w-full h-full object-cover rounded-full">
+              <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-brand-accent p-0.5 bg-slate-900 shadow-md mb-3 relative flex items-center justify-center">
+                <img src="profile.jpg" onerror="this.onerror=null; this.src='WhatsApp Image 2026-10-30 at 10.45.49_3.jpeg';" alt="Franck Adrien Mba" class="w-full h-full object-cover object-top rounded-full">
               </div>
 
               <h2 class="text-base font-bold text-white">Franck Adrien Mba</h2>
               <p class="text-xs font-mono text-brand-accent mb-3">Master Mechatronik (M.Sc.) @ FAU</p>
 
               <div class="w-full rounded bg-darkBg border border-darkBorder p-3 text-left font-mono text-[11px] space-y-1 text-slate-300">
-                <p><span class="text-slate-500">universitaet:</span> <span class="text-sky-300">"FAU Erlangen-Nürnberg"</span></p>
-                <p><span class="text-slate-500">studiengang:</span> <span class="text-amber-300">"M.Sc. Mechatronik"</span></p>
-                <p><span class="text-slate-500">schwerpunkte:</span> <span class="text-slate-300">"Embedded Systems & CPS"</span></p>
-                <p><span class="text-slate-500">sprachen:</span> [<span class="text-emerald-400">"DE C1"</span>, <span class="text-emerald-400">"EN Fließend"</span>, <span class="text-emerald-400">"FR Muttersprache"</span>]</p>
-                <p><span class="text-slate-500">arbeitsstatus:</span> <span class="text-cyan-300">"Werkstudent (140 Tage/Jahr)"</span></p>
+                <p><span class="text-slate-500">hochschule:</span> <span class="text-sky-300">"FAU Erlangen-Nürnberg"</span></p>
+                <p><span class="text-slate-500">fachrichtung:</span> <span class="text-amber-300">"Regelungstechnik & Sensorik"</span></p>
+                <p><span class="text-slate-500">sprachen:</span> [<span class="text-emerald-400">"FR Muttersprache"</span>, <span class="text-emerald-400">"DE C1 sehr gut"</span>, <span class="text-emerald-400">"EN gut"</span>]</p>
+                <p><span class="text-slate-500">status:</span> <span class="text-cyan-300">"Werkstudent (15–20h/Woche)"</span></p>
               </div>
 
-              <div class="mt-4 flex items-center justify-between w-full text-xs text-slate-400 font-mono">
-                <span>📍 Erlangen, Deutschland</span>
+              <!-- Button CV direkt in der Karte -->
+              <a href="lebenslauf_franck_adrien_mba.pdf" download="Lebenslauf_Franck_Adrien_Mba.pdf" class="mt-4 w-full py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors">
+                <i class="fa-solid fa-download"></i>
+                <span>Lebenslauf herunterladen (PDF)</span>
+              </a>
+
+              <div class="mt-3 flex items-center justify-between w-full text-xs text-slate-400 font-mono">
+                <span>📍 91058 Erlangen</span>
                 <span>⚙️ C++ / STM32 / Motion</span>
               </div>
             </div>
@@ -233,13 +249,13 @@
         
         <div class="lg:col-span-7 space-y-4 text-slate-300 text-sm leading-relaxed">
           <p>
-            Im Masterstudium Mechatronik an der <strong class="text-white">FAU Erlangen-Nürnberg</strong> vertiefe ich mein Know-how in den Bereichen <strong class="text-white">Cyber-Physical Systems, Regelungstechnik, autonome Sensorik und Echtzeitsysteme</strong>.
+            Im Masterstudium Mechatronik an der <strong class="text-white">FAU Erlangen-Nürnberg</strong> liegt mein Schwerpunkt in der Fachrichtung <strong class="text-white">Regelungstechnik & Sensorik</strong>, ergänzt durch Cyber-Physical Systems und echtzeitfähige Ablaufsteuerungen.
           </p>
           <p>
             Während meiner 7,5-monatigen Werkstudententätigkeit bei der <strong class="text-white">SRT Resistor Technology GmbH</strong> in Cadolzburg habe ich die Steuerungs- und Elektrotechnik eines automatisierten Waffle-Pack-Bestückers für SMD-Präzisionswiderstände realisiert. Meine Verantwortung reichte von der hardwarenahen C++-Ablaufsteuerung auf dem ATmega2560 über die serielle Anbindung intelligenter Achscontroller (PI Mercury C-663.12) bis hin zur Signalentstörung (EMV) und optischen Lageprüfung.
           </p>
           <p>
-            Ich suche aktuell eine anspruchsvolle <strong class="text-white">Werkstudentenstelle</strong> im Bereich Embedded Software, Mechatronik, Robotik oder industrielle Automatisierung.
+            Ich suche aktuell eine anspruchsvolle <strong class="text-white">Werkstudentenstelle</strong> im Bereich Embedded Software, Regelungstechnik, Sensorik, Robotik oder industrielle Automatisierung.
           </p>
 
           <div class="pt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-mono">
@@ -249,11 +265,11 @@
             </div>
             <div class="p-2.5 rounded bg-darkCard border border-darkBorder flex items-center gap-2">
               <i class="fa-solid fa-check text-emerald-400"></i>
-              <span>TestDaF C1 zertifiziert (4x TDN 4)</span>
+              <span>Deutsch: C1 sehr gut (TestDaF zertifiziert)</span>
             </div>
             <div class="p-2.5 rounded bg-darkCard border border-darkBorder flex items-center gap-2">
               <i class="fa-solid fa-check text-emerald-400"></i>
-              <span>Offizielle ZAB-Gleichwertigkeit (Bachelor)</span>
+              <span>Französisch: Muttersprache | Englisch: Gut</span>
             </div>
             <div class="p-2.5 rounded bg-darkCard border border-darkBorder flex items-center gap-2">
               <i class="fa-solid fa-check text-emerald-400"></i>
@@ -348,7 +364,7 @@
           
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
             <h3 class="text-base font-bold text-white group-hover:text-sky-300 transition-colors">
-              Master of Science (M.Sc.) Mechatronik
+              Master of Science (M.Sc.) Mechatronik – Fachrichtung: Regelungstechnik & Sensorik
             </h3>
             <span class="text-xs font-mono text-sky-300 bg-sky-950/70 border border-sky-800/60 px-2 py-0.5 rounded-full w-fit">
               04/2025 – Heute
@@ -360,7 +376,7 @@
           </div>
 
           <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Vertiefung: <strong class="text-white">Cyber-Physical Systems (5 ECTS), Sensorik und Autonome Systeme, Regelungstechnik, Echtzeit-Kommunikation</strong>. Berufspraktische Tätigkeit an der FAU erfolgreich mit 10 ECTS anerkannt.
+            Schwerpunkte: <strong class="text-white">Regelungstechnik, Sensorik & Autonome Systeme, Cyber-Physical Systems (5 ECTS), Echtzeit-Kommunikation</strong>. Berufspraktische Tätigkeit an der FAU erfolgreich mit 10 ECTS anerkannt.
           </p>
         </div>
 
@@ -679,9 +695,9 @@
           </div>
           <h3 class="text-white font-bold text-sm mb-2">Sprachen & Status</h3>
           <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
-            <li>• Deutsch: C1 (TestDaF 4x TDN 4)</li>
-            <li>• Englisch: Verhandlungssicher</li>
             <li>• Französisch: Muttersprache</li>
+            <li>• Deutsch: C1 sehr gut (TestDaF 4x TDN 4)</li>
+            <li>• Englisch: Gut</li>
             <li>• eAT § 16b (140 Tage voll / Werkstudent)</li>
             <li>• Wohnort: Erlangen (Metropolregion)</li>
           </ul>
