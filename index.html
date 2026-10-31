@@ -8,7 +8,7 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Inter & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,6 +23,11 @@
         extend: {
           colors: {
             brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
               fau: '#04316A',
               fauLight: '#0284c7',
               accent: '#38bdf8',
@@ -55,12 +60,13 @@
     }
   </style>
 </head>
-<body class="bg-darkBg text-slate-200 font-sans antialiased selection:bg-sky-500 selection:text-white">
+<body class="bg-darkBg text-slate-200 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
-  <!-- NAVIGATION -->
+  <!-- ================= NAVIGATION ================= -->
   <header class="fixed top-0 left-0 right-0 z-40 glass-header bg-darkBg/90 border-b border-darkBorder" id="navbar">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
       
+      <!-- Name / Branding -->
       <a href="#hero" class="flex items-center gap-3 group">
         <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-brand-fau to-brand-accent flex items-center justify-center text-white font-mono font-bold text-sm shadow-md group-hover:scale-105 transition-transform">
           FM
@@ -71,6 +77,7 @@
         </div>
       </a>
 
+      <!-- Menüpunkte Desktop -->
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
         <a href="#ueber-mich" class="text-slate-300 hover:text-brand-accent transition-colors">Über mich</a>
         <a href="#erfahrung" class="text-slate-300 hover:text-brand-accent transition-colors">Berufserfahrung</a>
@@ -80,6 +87,7 @@
         <a href="#kontakt" class="text-slate-300 hover:text-brand-accent transition-colors">Kontakt</a>
       </nav>
 
+      <!-- Externe Links & CV-Download -->
       <div class="hidden sm:flex items-center gap-2.5">
         <a href="lebenslauf_franck_adrien_mba.pdf" download="Lebenslauf_Franck_Adrien_Mba.pdf" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-semibold shadow-sm transition-all flex items-center gap-1.5" title="Lebenslauf als PDF herunterladen">
           <i class="fa-solid fa-file-arrow-down text-[11px]"></i>
@@ -93,12 +101,13 @@
         </a>
       </div>
 
+      <!-- Mobile Button -->
       <button id="mobileMenuBtn" class="md:hidden text-slate-300 hover:text-white p-2" aria-label="Menü öffnen">
         <i class="fa-solid fa-bars text-lg"></i>
       </button>
     </div>
 
-    <!-- Mobiles Menü -->
+    <!-- Mobiles Dropdown -->
     <div id="mobileMenu" class="hidden md:hidden bg-darkCard border-b border-darkBorder px-6 py-4 flex flex-col gap-3 font-medium text-sm">
       <a href="#ueber-mich" class="text-slate-300 hover:text-brand-accent mobile-link">Über mich</a>
       <a href="#erfahrung" class="text-slate-300 hover:text-brand-accent mobile-link">Berufserfahrung</a>
@@ -111,16 +120,22 @@
           <i class="fa-solid fa-file-arrow-down"></i>
           <span>Lebenslauf herunterladen (PDF)</span>
         </a>
+        <div class="flex gap-2">
+          <a href="https://linkedin.com/in/franck-adrien-mba-09559119a" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 text-center rounded bg-slate-800 text-white font-mono text-xs">LinkedIn</a>
+          <a href="https://github.com/franckadrien" target="_blank" rel="noopener noreferrer" class="flex-1 py-2 text-center rounded bg-slate-800 text-white font-mono text-xs">GitHub</a>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- ================= HERO ================= -->
   <section id="hero" class="relative pt-28 pb-20 md:pt-36 md:pb-28 tech-matrix-grid overflow-hidden">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
+        <!-- Text links -->
         <div class="lg:col-span-7 text-center lg:text-left">
+          
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-700/80 text-xs font-mono mb-5 shadow-sm">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <span class="text-emerald-400 font-medium">Verfügbar als Werkstudent (15–20h/Woche)</span>
@@ -136,13 +151,14 @@
             Ich bin <strong class="text-white font-semibold">Franck Adrien Mba</strong>, Masterstudent der Mechatronik an der FAU Erlangen-Nürnberg mit der Fachrichtung <strong class="text-white font-semibold">Regelungstechnik & Sensorik</strong>. Mein Fokus liegt auf hardwarenaher C/C++-Entwicklung, Closed-Loop-Schrittmotorsteuerungen und industrieller Automatisierung.
           </p>
 
+          <!-- Button-Leiste -->
           <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3">
             <a href="lebenslauf_franck_adrien_mba.pdf" download="Lebenslauf_Franck_Adrien_Mba.pdf" class="px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-semibold shadow-md transition-all flex items-center gap-2">
               <i class="fa-solid fa-file-arrow-down"></i>
               <span>Lebenslauf (PDF)</span>
             </a>
 
-            <a href="#projekte" class="px-5 py-2.5 rounded-lg bg-sky-500 hover:bg-sky-600 text-white font-mono text-xs font-semibold shadow-md transition-all flex items-center gap-2">
+            <a href="#projekte" class="px-5 py-2.5 rounded-lg bg-brand-500 hover:bg-brand-600 text-white font-mono text-xs font-semibold shadow-md transition-all flex items-center gap-2">
               <i class="fa-solid fa-microchip"></i>
               <span>Projekte</span>
             </a>
@@ -158,6 +174,7 @@
             </a>
           </div>
 
+          <!-- Kennzahlen -->
           <div class="grid grid-cols-3 gap-3 pt-8 mt-8 border-t border-darkBorder text-left max-w-lg mx-auto lg:mx-0">
             <div>
               <div class="text-xl font-bold font-mono text-sky-400">7,5 Monate</div>
@@ -187,8 +204,8 @@
             </div>
 
             <div class="flex flex-col items-center text-center">
-              <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-brand-accent p-0.5 bg-slate-900 shadow-md mb-3 relative flex items-center justify-center">  
-                <img src="profile.jpeg" onerror="this.onerror=null; this.src='profile.jpg';" alt="Franck Adrien Mba" class="w-full h-full object-cover rounded-full" />
+              <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-brand-accent p-0.5 bg-slate-900 shadow-md mb-3 relative flex items-center justify-center">
+                <img src="profile.jpeg" onerror="this.onerror=null; this.src='profile.jpg';" alt="Franck Adrien Mba" class="w-full h-full object-cover object-top rounded-full">
               </div>
 
               <h2 class="text-base font-bold text-white">Franck Adrien Mba</h2>
@@ -201,6 +218,7 @@
                 <p><span class="text-slate-500">status:</span> <span class="text-cyan-300">"Werkstudent (15–20h/Woche)"</span></p>
               </div>
 
+              <!-- Button CV direkt in der Karte -->
               <a href="lebenslauf_franck_adrien_mba.pdf" download="Lebenslauf_Franck_Adrien_Mba.pdf" class="mt-4 w-full py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-mono text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors">
                 <i class="fa-solid fa-download"></i>
                 <span>Lebenslauf herunterladen (PDF)</span>
@@ -218,7 +236,7 @@
     </div>
   </section>
 
-  <!-- ÜBER MICH -->
+  <!-- ================= ÜBER MICH ================= -->
   <section id="ueber-mich" class="py-20 bg-darkBg border-t border-darkBorder">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       
@@ -277,664 +295,4 @@
             <p class="text-xs text-slate-400">Echtzeitfähige Positionsregelung mit optischen Linearencodern, Schrittverlustüberwachung und automatischer Wiederaufnahme nach Störungen.</p>
           </div>
 
-          <div class="p-4 rounded-xl bg-darkCard border border-darkBorder">
-            <div class="flex items-center gap-3 mb-1.5">
-              <i class="fa-solid fa-shield-halved text-emerald-400 text-lg"></i>
-              <h3 class="text-white font-semibold text-sm">Industrielle Sensorik, Pneumatik & EMV</h3>
-            </div>
-            <p class="text-xs text-slate-400">Omron Laser-Lichtleiter, SMC Elektropneumatik (Vakuum- und Hubzylinder), Oszilloskop-Signalanalyse und Unterdrückung parasitärer Spannungsspitzen.</p>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ERFAHRUNG & BILDUNGSWEG -->
-  <section id="erfahrung" class="py-20 bg-darkBg/70 border-t border-darkBorder">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      
-      <div class="max-w-2xl mx-auto text-center mb-14">
-        <h2 class="text-xs font-mono uppercase tracking-widest text-brand-accent mb-1.5">Werdegang</h2>
-        <p class="text-2xl sm:text-3xl font-extrabold text-white">Praktische Erfahrung & Akademischer Weg</p>
-      </div>
-
-      <div class="relative border-l border-slate-800 ml-4 sm:ml-20 space-y-10">
-        
-        <!-- Station 1 -->
-        <div class="relative pl-6 sm:pl-8 group">
-          <div class="absolute -left-[7px] top-1.5 w-3.5 h-3.5 rounded-full bg-brand-accent ring-4 ring-darkBg group-hover:scale-125 transition-transform"></div>
-          
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
-            <h3 class="text-base font-bold text-white group-hover:text-brand-accent transition-colors">
-              Werkstudent Automatisierungstechnik & Mechatronik (Hard- & Software)
-            </h3>
-            <span class="text-xs font-mono text-cyan-300 bg-cyan-950/70 border border-cyan-800/60 px-2 py-0.5 rounded-full w-fit">
-              02/2026 – 09/2026 (7,5 Monate)
-            </span>
-          </div>
-
-          <div class="text-xs font-medium text-slate-400 mb-2">
-            SRT Resistor Technology GmbH • Cadolzburg
-          </div>
-
-          <p class="text-xs sm:text-sm text-slate-300 mb-3 leading-relaxed">
-            Eigenverantwortliche Konzeptionierung, Schaltungsrealisierung und Softwareentwicklung eines automatisierten Waffle-Pack-Bestückungssystems für SMD-Präzisionswiderstände:
-          </p>
-
-          <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside mb-3">
-            <li>Entwicklung des Master-Steuercodes in <strong class="text-white">C++ (Arduino Mega 2560 R3)</strong> und HMI-Touchscreen-Visualisierung (3,5" TFT Display).</li>
-            <li>Anbindung und Parametrierung von zwei <strong class="text-white">Physik Instrumente (PI) C-663.12 Mercury Step Controllern</strong> über RS-232/TTL-Pegelwandlung mittels PI General Command Set (GCS).</li>
-            <li>Realisierung einer echten Closed-Loop-Positionsregelung mit optischen Linearencodern zur Vermeidung von Schrittverlusten bei mechanischen Blockaden.</li>
-            <li>Integration von Omron Laser-Lichtleiter-Sensoren (E3C-LDA11) zur Orientierungserkennung sowie SMC-Elektropneumatik (SY114 Vakuumdüsen und VQD1151 Hubzylinder).</li>
-            <li>Messtechnische Behebung parasitärer Floating-Zustände an den Halbleiterausgängen der SMC-Zylindersensorik mittels Oszilloskop und externer 10-kΩ-Pull-Down-Widerstände.</li>
-          </ul>
-
-          <div class="flex flex-wrap gap-1.5 text-[11px] font-mono">
-            <span class="px-2 py-0.5 rounded bg-darkCard border border-darkBorder text-slate-300">C++ / State Machines</span>
-            <span class="px-2 py-0.5 rounded bg-darkCard border border-darkBorder text-slate-300">PI Mercury C-663.12</span>
-            <span class="px-2 py-0.5 rounded bg-darkCard border border-darkBorder text-slate-300">RS-232 / UART</span>
-            <span class="px-2 py-0.5 rounded bg-darkCard border border-darkBorder text-slate-300">Omron Laser</span>
-            <span class="px-2 py-0.5 rounded bg-darkCard border border-darkBorder text-slate-300">SMC Pneumatik</span>
-          </div>
-        </div>
-
-        <!-- Station 2 -->
-        <div class="relative pl-6 sm:pl-8 group">
-          <div class="absolute -left-[7px] top-1.5 w-3.5 h-3.5 rounded-full bg-brand-fauLight ring-4 ring-darkBg group-hover:scale-125 transition-transform"></div>
-          
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
-            <h3 class="text-base font-bold text-white group-hover:text-sky-300 transition-colors">
-              Master of Science (M.Sc.) Mechatronik – Fachrichtung: Regelungstechnik & Sensorik
-            </h3>
-            <span class="text-xs font-mono text-sky-300 bg-sky-950/70 border border-sky-800/60 px-2 py-0.5 rounded-full w-fit">
-              04/2025 – Heute
-            </span>
-          </div>
-
-          <div class="text-xs font-medium text-slate-400 mb-2">
-            Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)
-          </div>
-
-          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-            Schwerpunkte: <strong class="text-white">Regelungstechnik, Sensorik & Autonome Systeme, Cyber-Physical Systems (5 ECTS), Echtzeit-Kommunikation</strong>. Berufspraktische Tätigkeit an der FAU erfolgreich mit 10 ECTS anerkannt.
-          </p>
-        </div>
-
-        <!-- Station 3 -->
-        <div class="relative pl-6 sm:pl-8 group">
-          <div class="absolute -left-[7px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-600 ring-4 ring-darkBg group-hover:scale-125 transition-transform"></div>
-          
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
-            <h3 class="text-base font-bold text-white">
-              Technischer Praktikant – Robotik & Sensorik
-            </h3>
-            <span class="text-xs font-mono text-slate-400 bg-slate-800 border border-slate-700 px-2 py-0.5 rounded-full w-fit">
-              06/2021 – 08/2021
-            </span>
-          </div>
-
-          <div class="text-xs font-medium text-slate-400 mb-1">
-            CGW SARL (Cameroon Germany Workers), Douala
-          </div>
-
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Entwicklung eines mobilen Roboters mit Ultraschallsensorik (HC-SR04) und Servomotor-Schwenkung zur Hindernisvermeidung sowie IR-Fernsteuerung auf Arduino-Basis.
-          </p>
-        </div>
-
-        <!-- Station 4 -->
-        <div class="relative pl-6 sm:pl-8 group">
-          <div class="absolute -left-[7px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-600 ring-4 ring-darkBg group-hover:scale-125 transition-transform"></div>
-          
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
-            <h3 class="text-base font-bold text-white">
-              Trainer-Assistent & Mikrocontroller-Workshops
-            </h3>
-            <span class="text-xs font-mono text-slate-400 bg-slate-800 border border-slate-700 px-2 py-0.5 rounded-full w-fit">
-              2020 – 2021
-            </span>
-          </div>
-
-          <div class="text-xs font-medium text-slate-400 mb-1">
-            Innovatech Association / PrépaVogt, Jaunde
-          </div>
-
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Fachliche Anleitung in Schaltungstechnik, Sensorik und Mikrocontroller-Programmierung (Arduino, STM32). Projektierung eines vierrotorigen Flugsystems (Quadrocopter) mit IMU-Sensorik und PID-Fluglagenregelung.
-          </p>
-        </div>
-
-        <!-- Station 5 -->
-        <div class="relative pl-6 sm:pl-8 group">
-          <div class="absolute -left-[7px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-600 ring-4 ring-darkBg group-hover:scale-125 transition-transform"></div>
-          
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1">
-            <h3 class="text-base font-bold text-white">
-              Bachelor (Licence Professionnelle) – Mechatronik & Eingebettete Systeme
-            </h3>
-            <span class="text-xs font-mono text-slate-400 bg-slate-800 border border-slate-700 px-2 py-0.5 rounded-full w-fit">
-              2019 – 2022
-            </span>
-          </div>
-
-          <div class="text-xs font-medium text-slate-400 mb-1">
-            Institut Universitaire Siantou / Universität Jaunde I
-          </div>
-
-          <p class="text-xs text-slate-400">
-            Abschluss mit der Note „Gut“ (Rang 1 von 25). Durch die Zentralstelle für ausländisches Bildungswesen (ZAB) der Kultusministerkonferenz offiziell als gleichwertig mit einem deutschen Bachelor-Abschluss bewertet.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PROJEKTE -->
-  <section id="projekte" class="py-20 bg-darkBg border-t border-darkBorder">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      
-      <div class="max-w-2xl mx-auto text-center mb-10">
-        <h2 class="text-xs font-mono uppercase tracking-widest text-brand-accent mb-1.5">Projektübersicht</h2>
-        <p class="text-2xl sm:text-3xl font-extrabold text-white">Ausgewählte Technische Mechatronik-Projekte</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-        <!-- PROJEKT 1 -->
-        <div class="group rounded-xl bg-darkCard border border-darkBorder overflow-hidden hover:border-brand-accent/50 hover:shadow-lg transition-all flex flex-col">
-          <div class="h-44 bg-gradient-to-tr from-slate-950 via-slate-900 to-sky-950 p-5 flex flex-col justify-between border-b border-darkBorder">
-            <div class="flex items-center justify-between text-xs font-mono">
-              <span class="px-2 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-800/60 font-semibold">Industrieanlage</span>
-              <span class="text-slate-400">SRT Resistor Tech</span>
-            </div>
-            <div>
-              <i class="fa-solid fa-microchip text-3xl text-brand-accent mb-2"></i>
-              <h3 class="text-lg font-bold text-white group-hover:text-brand-accent transition-colors">Waffle-Pack Bestückungsautomat</h3>
-            </div>
-          </div>
-
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <p class="text-xs text-slate-300 leading-relaxed mb-4">
-              Vollautomatisches Pick-and-Place-System für SMD-Widerstände (0402, 0603, 0805) mit Wiederholgenauigkeit ±0,1 mm. Closed-Loop-Regelung über optische Linearencoder verhindert Schrittverluste.
-            </p>
-
-            <div class="space-y-3">
-              <div class="flex flex-wrap gap-1 text-[11px] font-mono">
-                <span class="px-1.5 py-0.5 rounded bg-darkBg text-cyan-300 border border-darkBorder">C++ (ATmega2560)</span>
-                <span class="px-1.5 py-0.5 rounded bg-darkBg text-slate-300 border border-darkBorder">RS-232 GCS</span>
-                <span class="px-1.5 py-0.5 rounded bg-darkBg text-slate-300 border border-darkBorder">PI Mercury Step</span>
-                <span class="px-1.5 py-0.5 rounded bg-darkBg text-slate-300 border border-darkBorder">Omron Laser</span>
-              </div>
-              <button onclick="openModal('wafflePack')" class="w-full py-2 rounded-lg bg-darkBg hover:bg-sky-500 border border-darkBorder hover:border-transparent text-xs font-mono font-medium text-white transition-all flex items-center justify-center gap-1.5">
-                <span>Details & Spezifikationen</span>
-                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJEKT 2 -->
-        <div class="group rounded-xl bg-darkCard border border-darkBorder overflow-hidden hover:border-sky-500/50 hover:shadow-lg transition-all flex flex-col">
-          <div class="h-44 bg-gradient-to-tr from-slate-950 via-slate-900 to-indigo-950 p-5 flex flex-col justify-between border-b border-darkBorder">
-            <div class="flex items-center justify-between text-xs font-mono">
-              <span class="px-2 py-0.5 rounded bg-indigo-950 text-indigo-300 border border-indigo-800/60 font-semibold">Abschlussarbeit</span>
-              <span class="text-slate-400">Flugdynamik</span>
-            </div>
-            <div>
-              <i class="fa-solid fa-helicopter text-3xl text-indigo-400 mb-2"></i>
-              <h3 class="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors">Autonomer PID-Quadrocopter</h3>
-            </div>
-          </div>
-
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <p class="text-xs text-slate-300 leading-relaxed mb-4">
-              Konstruktion und Programmierung eines 4-rotorigen Flugsystems mit STM32/Arduino. Sensorfusion von 6-DOF-IMU-Daten und hochfrequente PID-Fluglagenregelung.
-            </p>
-
-            <div class="space-y-3">
-              <div class="flex flex-wrap gap-1 text-[11px] font-mono">
-                <span class="px-1.5 py-0.5 rounded bg-darkBg text-indigo-300 border border-darkBorder">STM32 / C</span>
-                <span class="px-1.5 py-0.5 rounded bg-darkBg text-slate-300 border border-darkBorder">IMU Sensorfusion</span>
-                <span class="px-1.5 py-0.5 rounded bg-darkBg text-slate-300 border border-darkBorder">PID-Regelung</span>
-              </div>
-              <button onclick="openModal('quadcopter')" class="w-full py-2 rounded-lg bg-darkBg hover:bg-sky-500 border border-darkBorder hover:border-transparent text-xs font-mono font-medium text-white transition-all flex items-center justify-center gap-1.5">
-                <span>Details & Spezifikationen</span>
-                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJEKT 3 -->
-        <div class="group rounded-xl bg-darkCard border border-darkBorder overflow-hidden hover:border-emerald-500/50 hover:shadow-lg transition-all flex flex-col">
-          <div class="h-44 bg-gradient-to-tr from-slate-950 via-slate-900 to-emerald-950 p-5 flex flex-col justify-between border-b border-darkBorder">
-            <div class="flex items-center justify-between text-xs font-mono">
-              <span class="px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800/60 font-semibold">FAU Mastermodul</span>
-              <span class="text-slate-400">CPS Architektur</span>
-            </div>
-            <div>
-              <i class="fa-solid fa-network-wired text-3xl text-emerald-400 mb-2"></i>
-              <h3 class="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">Cyber-Physical Systems & Telemetrie</h3>
-            </div>
-          </div>
-
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <p class="text-xs text-slate-300 leading-relaxed mb-4">
-              Echtzeitfähiges Monitoring und sensorische Erfassung verteilter mechatronischer Knoten. Datenübertragung über serielle Schnittstellen und WebSockets.
-            </p>
-
-            <div class="space-y-3">
-              <div class="flex flex-wrap gap-1 text-[11px] font-mono">
-                <span class="px-1.5 py-0.5 rounded bg-darkBg text-emerald-300 border border-darkBorder">CPS Modellierung</span>
-                <span class="px-1.5 py-0.5 rounded bg-darkBg text-slate-300 border border-darkBorder">Python</span>
-                <span class="px-1.5 py-0.5 rounded bg-darkBg text-slate-300 border border-darkBorder">WebSockets</span>
-              </div>
-              <button onclick="openModal('cpsTelemetry')" class="w-full py-2 rounded-lg bg-darkBg hover:bg-sky-500 border border-darkBorder hover:border-transparent text-xs font-mono font-medium text-white transition-all flex items-center justify-center gap-1.5">
-                <span>Details & Spezifikationen</span>
-                <i class="fa-solid fa-arrow-right text-[10px]"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- C++ FIRMWARE -->
-  <section id="firmware" class="py-20 bg-darkBg/80 border-t border-darkBorder">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      
-      <div class="max-w-2xl mx-auto text-center mb-10">
-        <h2 class="text-xs font-mono uppercase tracking-widest text-brand-accent mb-1.5">Firmware-Einblick</h2>
-        <p class="text-2xl sm:text-3xl font-extrabold text-white">Echter C++ Master-Steuerungscode</p>
-        <p class="text-xs text-slate-400 mt-1">Auszug aus der Ablaufsteuerung des Waffle-Pack-Bestückers (SRT Resistor Technology)</p>
-      </div>
-
-      <div class="max-w-4xl mx-auto rounded-xl bg-darkCard border border-darkBorder shadow-2xl overflow-hidden font-mono text-xs">
-        <div class="bg-slate-900 px-4 py-3 border-b border-darkBorder flex items-center justify-between">
-          <div class="flex items-center gap-2">
-            <span class="w-3 h-3 rounded-full bg-rose-500"></span>
-            <span class="w-3 h-3 rounded-full bg-amber-500"></span>
-            <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
-            <span class="ml-2 text-slate-400 text-xs">WafflePack_Master_Steuerung.cpp</span>
-          </div>
-          <button onclick="copyCodeSnippet()" class="text-slate-400 hover:text-white px-2 py-1 rounded bg-slate-800 text-[11px] transition-colors">
-            <i class="fa-regular fa-copy mr-1"></i> Code kopieren
-          </button>
-        </div>
-
-        <div class="p-4 sm:p-6 overflow-x-auto text-slate-300 leading-relaxed max-h-96">
-<pre><code id="embeddedCodeSnippet"><span class="text-slate-500">// PROJEKT: Waffle-Pack-Bestücker für SMD-Präzisionswiderstände</span>
-<span class="text-slate-500">// HARDWARE: Arduino Mega 2560 R3 + 2x PI C-663.12 + SMC Pneumatik + Omron Laser</span>
-<span class="text-slate-500">// AUTOR: Franck Adrien Mba (SRT Resistor Technology GmbH / FAU Mechatronik)</span>
-
-<span class="text-sky-400">#include</span> <span class="text-amber-300"><Arduino.h></span>
-<span class="text-sky-400">#define</span> SerialX Serial1  <span class="text-slate-500">// X-Achse: PI Mercury C-663.12 (UART1: TX18/RX19)</span>
-<span class="text-sky-400">#define</span> SerialY Serial2  <span class="text-slate-500">// Y-Achse: PI Mercury C-663.12 (UART2: TX16/RX17)</span>
-
-<span class="text-purple-400">const int</span> PIN_OMRON_SENSOR = 22; <span class="text-slate-500">// Omron E3C-LDA11 Laser-Präsenzsensor</span>
-<span class="text-purple-400">const int</span> PIN_VENTIL_SAUGEN = 24; <span class="text-slate-500">// SMC SY114-5LZ Vakuumsauger</span>
-<span class="text-purple-400">const int</span> PIN_VENTIL_HUB    = 26; <span class="text-slate-500">// SMC VQD1151 Pneumatik-Hubzylinder</span>
-
-<span class="text-purple-400">void</span> <span class="text-blue-400">holeUndPlatziereBauteil</span>(<span class="text-purple-400">float</span> zielX_mm, <span class="text-purple-400">float</span> zielY_mm) {
-    <span class="text-slate-500">// 1. Zur Übergabeposition fahren (Abholpunkt Schüttgut / X = 0.00 mm)</span>
-    SerialX.print(<span class="text-amber-300">"MOV 1 0.000\n"</span>);
-    warteBisStillstand(SerialX);
-
-    <span class="text-slate-500">// 2. Hubzylinder senken & Vakuumsauger aktivieren</span>
-    digitalWrite(PIN_VENTIL_HUB, HIGH);
-    delay(250);
-    digitalWrite(PIN_VENTIL_SAUGEN, HIGH);
-    delay(400);
-    digitalWrite(PIN_VENTIL_HUB, LOW);  <span class="text-slate-500">// Hubzylinder wieder anheben</span>
-    delay(250);
-
-    <span class="text-slate-500">// 3. Optische Teileprüfung über Omron Laser-Sensor</span>
-    <span class="text-purple-400">if</span> (digitalRead(PIN_OMRON_SENSOR) == HIGH) {
-        <span class="text-slate-500">// 4. Closed-Loop-Fahrt zum berechneten Matrix-Nest des Waffle Packs</span>
-        SerialX.print(<span class="text-amber-300">"MOV 1 "</span> + String(zielX_mm, 3) + <span class="text-amber-300">"\n"</span>);
-        SerialY.print(<span class="text-amber-300">"MOV 1 "</span> + String(zielY_mm, 3) + <span class="text-amber-300">"\n"</span>);
-        warteBisStillstand(SerialX);
-        warteBisStillstand(SerialY);
-
-        <span class="text-slate-500">// 5. Bauteil präzise im Nest ablegen</span>
-        digitalWrite(PIN_VENTIL_HUB, HIGH);
-        delay(250);
-        digitalWrite(PIN_VENTIL_SAUGEN, LOW); <span class="text-slate-500">// Vakuum abschalten</span>
-        delay(300);
-        digitalWrite(PIN_VENTIL_HUB, LOW);
-        delay(200);
-    }
-}</code></pre>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- KOMPETENZEN -->
-  <section id="kompetenzen" class="py-20 bg-darkBg border-t border-darkBorder">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      
-      <div class="max-w-2xl mx-auto text-center mb-14">
-        <h2 class="text-xs font-mono uppercase tracking-widest text-brand-accent mb-1.5">Fachprofil</h2>
-        <p class="text-2xl sm:text-3xl font-extrabold text-white">Technische Kenntnisse & Methoden</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        
-        <div class="p-5 rounded-xl bg-darkCard border border-darkBorder">
-          <div class="w-9 h-9 rounded-lg bg-sky-950 text-brand-accent flex items-center justify-center text-lg mb-3">
-            <i class="fa-solid fa-microchip"></i>
-          </div>
-          <h3 class="text-white font-bold text-sm mb-2">Mikrocontroller & Hardware</h3>
-          <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
-            <li>• STM32 (ARM Cortex)</li>
-            <li>• Arduino (Mega, Uno, Nano)</li>
-            <li>• PI Mercury C-663.12 Controller</li>
-            <li>• ESP32 & Raspberry Pi</li>
-            <li>• Optische Linearencoder</li>
-          </ul>
-        </div>
-
-        <div class="p-5 rounded-xl bg-darkCard border border-darkBorder">
-          <div class="w-9 h-9 rounded-lg bg-cyan-950 text-cyan-400 flex items-center justify-center text-lg mb-3">
-            <i class="fa-solid fa-code"></i>
-          </div>
-          <h3 class="text-white font-bold text-sm mb-2">Programmierung & Tools</h3>
-          <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
-            <li>• C & C++ (OOP, State Machines)</li>
-            <li>• Python (Automatisierung)</li>
-            <li>• MATLAB & Simulink</li>
-            <li>• Git & GitHub Versionierung</li>
-            <li>• HTML / CSS / JavaScript</li>
-          </ul>
-        </div>
-
-        <div class="p-5 rounded-xl bg-darkCard border border-darkBorder">
-          <div class="w-9 h-9 rounded-lg bg-indigo-950 text-indigo-400 flex items-center justify-center text-lg mb-3">
-            <i class="fa-solid fa-network-wired"></i>
-          </div>
-          <h3 class="text-white font-bold text-sm mb-2">Busse & Aktorik</h3>
-          <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
-            <li>• RS-232, UART, TTL-Wandlung</li>
-            <li>• SPI, I2C Buskommunikation</li>
-            <li>• Closed-Loop-Schrittmotoren</li>
-            <li>• SMC Elektropneumatik & Vakuum</li>
-            <li>• Omron Laser-Sensorik</li>
-          </ul>
-        </div>
-
-        <div class="p-5 rounded-xl bg-darkCard border border-darkBorder">
-          <div class="w-9 h-9 rounded-lg bg-emerald-950 text-emerald-400 flex items-center justify-center text-lg mb-3">
-            <i class="fa-solid fa-language"></i>
-          </div>
-          <h3 class="text-white font-bold text-sm mb-2">Sprachen & Status</h3>
-          <ul class="text-xs text-slate-300 space-y-1.5 font-mono">
-            <li>• Französisch: Muttersprache</li>
-            <li>• Deutsch: C1 sehr gut (TestDaF 4x TDN 4)</li>
-            <li>• Englisch: Gut</li>
-            <li>• eAT § 16b (140 Tage voll / Werkstudent)</li>
-            <li>• Wohnort: Erlangen (Metropolregion)</li>
-          </ul>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- KONTAKT -->
-  <section id="kontakt" class="py-20 bg-darkBg/60 border-t border-darkBorder">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      
-      <div class="max-w-2xl mx-auto text-center mb-14">
-        <h2 class="text-xs font-mono uppercase tracking-widest text-brand-accent mb-1.5">Kontakt</h2>
-        <p class="text-2xl sm:text-3xl font-extrabold text-white">Lassen Sie uns über eine Werkstudententätigkeit sprechen</p>
-        <p class="text-xs text-slate-400 mt-2">Verfügbar ab sofort für Werkstudententätigkeiten (bis zu 20 Std./Woche während des Semesters, flexibel in den Semesterferien).</p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        
-        <!-- Info Karten mit Foto -->
-        <div class="lg:col-span-5 space-y-3">
-          
-          <div class="p-4 rounded-xl bg-darkCard border border-darkBorder flex items-center gap-4 mb-2 shadow-lg">
-            <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-brand-accent shrink-0 p-0.5 bg-slate-900 shadow-md flex items-center justify-center">
-              <img src="profile.jpeg" onerror="this.onerror=null; this.src='profile.jpg';" alt="Franck Adrien Mba" class="w-full h-full object-cover rounded-full" />
-            </div>
-            <div>
-              <h3 class="text-white font-bold text-sm">Franck Adrien Mba</h3>
-              <p class="text-xs font-mono text-brand-accent">M.Sc. Mechatronik • FAU</p>
-              <p class="text-[11px] text-slate-400">Region Nürnberg / Erlangen / Fürth</p>
-            </div>
-          </div>
-
-          <div class="p-4 rounded-xl bg-darkCard border border-darkBorder flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-sky-950 text-brand-accent flex items-center justify-center text-base shrink-0">
-              <i class="fa-regular fa-envelope"></i>
-            </div>
-            <div>
-              <div class="text-[11px] text-slate-400 font-mono">E-Mail</div>
-              <a href="mailto:mbaadrien25@gmail.com" class="text-xs sm:text-sm font-semibold text-white hover:text-brand-accent transition-colors">mbaadrien25@gmail.com</a>
-            </div>
-          </div>
-
-          <div class="p-4 rounded-xl bg-darkCard border border-darkBorder flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-cyan-950 text-cyan-400 flex items-center justify-center text-base shrink-0">
-              <i class="fa-solid fa-phone"></i>
-            </div>
-            <div>
-              <div class="text-[11px] text-slate-400 font-mono">Telefon / Mobil</div>
-              <a href="tel:+4915736870708" class="text-xs sm:text-sm font-semibold text-white hover:text-cyan-400 transition-colors">+49 157 36870708</a>
-            </div>
-          </div>
-
-          <div class="p-4 rounded-xl bg-darkCard border border-darkBorder flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-indigo-950 text-indigo-400 flex items-center justify-center text-base shrink-0">
-              <i class="fa-brands fa-linkedin"></i>
-            </div>
-            <div>
-              <div class="text-[11px] text-slate-400 font-mono">LinkedIn Profil</div>
-              <a href="https://linkedin.com/in/franck-adrien-mba-09559119a" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm font-semibold text-white hover:text-indigo-400 transition-colors">linkedin.com/in/franck-adrien-mba-09559119a</a>
-            </div>
-          </div>
-
-          <div class="p-4 rounded-xl bg-darkCard border border-darkBorder flex items-center gap-3">
-            <div class="w-10 h-10 rounded-lg bg-slate-800 text-slate-300 flex items-center justify-center text-base shrink-0">
-              <i class="fa-brands fa-github"></i>
-            </div>
-            <div>
-              <div class="text-[11px] text-slate-400 font-mono">GitHub Repositories</div>
-              <a href="https://github.com/franckadrien" target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm font-semibold text-white hover:text-brand-accent transition-colors">github.com/franckadrien</a>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Formular -->
-        <div class="lg:col-span-7">
-          <div class="p-6 rounded-xl bg-darkCard border border-darkBorder shadow-xl">
-            <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label class="block text-[11px] font-mono text-slate-300 mb-1" for="name">Ihr Name / Unternehmen *</label>
-                  <input type="text" id="name" required class="w-full px-3.5 py-2 rounded-lg bg-darkBg border border-darkBorder text-white text-xs focus:outline-none focus:border-brand-accent transition-colors" placeholder="z. B. Siemens AG / Personalabteilung">
-                </div>
-                <div>
-                  <label class="block text-[11px] font-mono text-slate-300 mb-1" for="email">Ihre E-Mail-Adresse *</label>
-                  <input type="email" id="email" required class="w-full px-3.5 py-2 rounded-lg bg-darkBg border border-darkBorder text-white text-xs focus:outline-none focus:border-brand-accent transition-colors" placeholder="recruiting@unternehmen.de">
-                </div>
-              </div>
-
-              <div>
-                <label class="block text-[11px] font-mono text-slate-300 mb-1" for="subject">Betreff *</label>
-                <input type="text" id="subject" required class="w-full px-3.5 py-2 rounded-lg bg-darkBg border border-darkBorder text-white text-xs focus:outline-none focus:border-brand-accent transition-colors" placeholder="Werkstudentenstelle Mechatronik / Vorstellungsgespräch">
-              </div>
-
-              <div>
-                <label class="block text-[11px] font-mono text-slate-300 mb-1" for="message">Ihre Nachricht *</label>
-                <textarea id="message" rows="3" required class="w-full px-3.5 py-2 rounded-lg bg-darkBg border border-darkBorder text-white text-xs focus:outline-none focus:border-brand-accent transition-colors" placeholder="Sehr geehrter Herr Mba, wir haben Ihr Profil gesehen und möchten Sie gerne kennenlernen..."></textarea>
-              </div>
-
-              <button type="submit" class="w-full py-2.5 rounded-lg bg-sky-500 hover:bg-sky-600 text-white font-mono font-semibold text-xs transition-all flex items-center justify-center gap-1.5">
-                <i class="fa-solid fa-paper-plane text-[10px]"></i>
-                <span>Nachricht absenden</span>
-              </button>
-            </form>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="py-6 bg-darkBg border-t border-darkBorder text-center text-xs text-slate-400 font-mono">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-      <div>© 2026 Franck Adrien Mba • FAU Erlangen-Nürnberg</div>
-      <div class="flex items-center gap-3">
-        <a href="https://linkedin.com/in/franck-adrien-mba-09559119a" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">LinkedIn</a>
-        <span>•</span>
-        <a href="https://github.com/franckadrien" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">GitHub</a>
-        <span>•</span>
-        <a href="mailto:mbaadrien25@gmail.com" class="hover:text-white transition-colors">mbaadrien25@gmail.com</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- MODAL -->
-  <div id="projectModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="relative w-full max-w-2xl bg-darkCard border border-darkBorder rounded-xl p-6 shadow-2xl overflow-y-auto max-h-[88vh]">
-      <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-base">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-      <div id="modalContent"></div>
-    </div>
-  </div>
-
-  <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 px-3.5 py-2 rounded-lg bg-emerald-500 text-white font-mono text-xs shadow-lg flex items-center gap-2">
-    <i class="fa-solid fa-circle-check"></i>
-    <span id="toastMessage">Kopiert</span>
-  </div>
-
-  <script>
-    const projectDetails = {
-      wafflePack: {
-        title: "Automatisierter Waffle-Pack-Bestücker für SMD-Widerstände",
-        organization: "SRT Resistor Technology GmbH",
-        role: "Werkstudent Automatisierungstechnik & Mechatronik",
-        period: "02/2026 – 09/2026 (7,5 Monate / 32,5 Wochen)",
-        description: "Realisierung einer vollautomatischen Pick-and-Place-Bestückungsanlage zur Übertragung von SMD-Miniaturwiderständen (0402, 0603, 0805) in Waffle-Pack-Trays mit Wiederholgenauigkeit ±0,10 mm.",
-        highlights: [
-          "Master-Steuerung: Arduino Mega 2560 R3 mit nicht-blockierenden C++ Zustandsautomaten (State Machines).",
-          "Antriebstechnik: 2x Physik Instrumente (PI) C-663.12 Mercury Step Controller über RS-232 mit PI General Command Set (GCS).",
-          "Closed-Loop-Sicherheit: Auswertung optischer Linearencoder auf den PI L-836 Achsen verhindert Schrittverlust bei Blockaden oder manuellen Eingriffen.",
-          "Sensorik & Pneumatik: Omron E3C-LDA11 Laser-Sensorik zur Lageerkennung (Funktionsseite schwarz / Trägerseite weiß) und SMC Vakuumdüsen (SY114) sowie Hubzylinder (VQD1151).",
-          "EMV-Entstörung: Oszilloskop-gestützte Fehleranalyse und Beseitigung parasitärer Floating-Zustände an SMC-Halbleiter-Magnetschaltern durch 10-kΩ-Pull-Down-Widerstände."
-        ],
-        tags: ["C++", "Arduino Mega 2560", "Physik Instrumente", "RS-232 / GCS", "Closed-Loop PID", "SMC Pneumatik", "Omron Laser"]
-      },
-      quadcopter: {
-        title: "Autonomer Quadrocopter mit PID-Lageregelung",
-        organization: "Bachelor-Abschlussprojekt / PrépaVogt",
-        role: "Entwicklungsleitung Hard- & Software",
-        period: "Akademisches Abschlussprojekt",
-        description: "Konzeption, Aufbau und Regelung eines vierrotorigen unbemannten Flugsystems zur präzisen Lage- und Höhenstabilisierung.",
-        highlights: [
-          "Hardware-Plattform: STM32 & Arduino Controller-Architektur.",
-          "Sensorfusion: Auswertung und Filterung von 6-DOF-IMU-Sensorwerten (Beschleunigungsmesser & Gyroskop).",
-          "Regelungsalgorithmus: Hochfrequente PID-Regelung zur Aussteuerung der 4 bürstenlosen Motoren über PWM."
-        ],
-        tags: ["STM32", "C", "PID-Regelung", "IMU-Sensorik", "Robotik", "PWM-Ansteuerung"]
-      },
-      cpsTelemetry: {
-        title: "Cyber-Physical Systems & Telemetrie-Monitoring",
-        organization: "FAU Erlangen-Nürnberg",
-        role: "Master-Projekt Mechatronik",
-        period: "M.Sc. Mechatronik",
-        description: "Realisierung einer verteilten Sensor-Aktor-Architektur zur Echtzeitüberwachung industrieller Komponenten.",
-        highlights: [
-          "Modellierung: Zustandsautomaten und Zeitbeschränkungen für mechatronische Prozesse.",
-          "Telemetrie: Kontinuierliche Datenübertragung serieller Telegramme an ein Monitoring-Dashboard über WebSockets.",
-          "Webtechnologien: Grafische Schnittstelle zur Prozessüberwachung."
-        ],
-        tags: ["Cyber-Physical Systems", "Python", "WebSockets", "FAU EEI"]
-      }
-    };
-
-    const mobileBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    mobileBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-    document.querySelectorAll('.mobile-link').forEach(link => {
-      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
-    });
-
-    function openModal(key) {
-      const data = projectDetails[key];
-      if (!data) return;
-      document.getElementById('modalContent').innerHTML = `
-        <div class="mb-3">
-          <span class="text-[11px] font-mono text-brand-accent uppercase tracking-widest">${data.organization}</span>
-          <h2 class="text-xl font-bold text-white mt-1">${data.title}</h2>
-          <div class="text-xs text-slate-400 font-mono mt-0.5">${data.role} • ${data.period}</div>
-        </div>
-        <p class="text-xs text-slate-300 leading-relaxed mb-4">${data.description}</p>
-        <h3 class="text-xs font-mono uppercase text-white tracking-wider mb-1.5 font-semibold">Technische Highlights:</h3>
-        <ul class="text-xs text-slate-300 space-y-1.5 mb-5 list-disc list-inside">
-          ${data.highlights.map(item => `<li>${item}</li>`).join('')}
-        </ul>
-        <div class="flex flex-wrap gap-1 pt-3 border-t border-darkBorder font-mono text-[11px]">
-          ${data.tags.map(tag => `<span class="px-2 py-0.5 rounded bg-darkBg text-cyan-300 border border-darkBorder">${tag}</span>`).join('')}
-        </div>
-      `;
-      document.getElementById('projectModal').classList.remove('hidden');
-    }
-
-    function closeModal() {
-      document.getElementById('projectModal').classList.add('hidden');
-    }
-
-    document.getElementById('projectModal').addEventListener('click', (e) => {
-      if (e.target.id === 'projectModal') closeModal();
-    });
-
-    function copyCodeSnippet() {
-      const text = document.getElementById('embeddedCodeSnippet').innerText;
-      navigator.clipboard.writeText(text).then(() => {
-        showToast("C++ Quellcode in Zwischenablage kopiert!");
-      });
-    }
-
-    function showToast(msg) {
-      const toast = document.getElementById('toast');
-      document.getElementById('toastMessage').innerText = msg;
-      toast.classList.remove('translate-y-20', 'opacity-0');
-      toast.classList.add('translate-y-0', 'opacity-100');
-      setTimeout(() => {
-        toast.classList.remove('translate-y-0', 'opacity-100');
-        toast.classList.add('translate-y-20', 'opacity-0');
-      }, 2500);
-    }
-
-    function handleFormSubmit(e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const subject = document.getElementById('subject').value;
-      const message = document.getElementById('message').value;
-
-      const mailtoUrl = `mailto:mbaadrien25@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Absender: " + name + " (" + email + ")\n\n" + message)}`;
-      window.location.href = mailtoUrl;
-      showToast("E-Mail Client geöffnet!");
-    }
-  </script>
-</body>
-</html>
+          <div class="p-4 rounded-xl bg-darkCard border border
